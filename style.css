@@ -1,30 +1,58 @@
 html {
 
     height: 100%;
-    font-family: 'Montserrat';
 
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Roboto', sans-serif;
 
     --bg: #FCFCFC;
     --bg-panel: #EBEBEB;
-    --color-headings: #0077FF;
+    --color-headings: #1f1f24;
     --color-text: #333333;
 }
 
 body {
     background-color: var(--bg);
+    transition: .3s ease-in-out
 }
 
 .container {
     background-color: var(--bg-panel);
-
     margin: 5em;
     padding: 5em;
-
     border-radius: 15px;
+    transition: .3s ease-in-out
 
+}
+
+header { display: flex; }
+
+ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+.social-media {
+    width: 40px;
+    fill: var(--bg-panel);
+    margin-right: 10px;
+    transition: .3s ease-in;
+}
+
+.social-media:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.profile-photo {
+    height: 140px;
+    width: 140px;
+    border-radius: 50%; 
+    margin-right: 20px;
+    border: 2px solid #fff
 }
 
 h1 {
@@ -36,13 +64,15 @@ p {
     color: var(--color-text);
     font-size: 1.1em;
     line-height: 1.8em;
-    margin-top: 2em;
 }
-
-
-
  /* toggle style */
  
+
+ .toggle {
+    margin-bottom: 20px;
+    height: 30px;
+ }
+
 input[type=checkbox]{
     height: 0;
     width: 0;
@@ -73,7 +103,7 @@ label::after{
 }
 
 input:checked + label {
-    background-color: var(--color-headings);
+    background-color: #5bacff;
 }
 
 input:checked + label::after {
